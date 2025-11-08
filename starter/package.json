@@ -1,8 +1,9 @@
 {
-  "name": "study-night",
+  "name": "starter",
   "version": "1.0.0",
   "description": "Flashcard tool",
   "scripts": {
+    "start": "gulp",
     "test": "mocha"
   },
   "author": "",
