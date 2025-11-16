@@ -2,7 +2,6 @@
 /* Remove unused and unnecessary styling and selectors */
 /* Navigation styling */
 body header {
-  width: 200px;
   width: 100px;
   cursor: pointer;
 }

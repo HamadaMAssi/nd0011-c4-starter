@@ -1,25 +1,29 @@
-import js from "@eslint/js";
-import globals from "globals";
-import pluginReact from "eslint-plugin-react";
-import { defineConfig } from "eslint/config";
+import js from '@eslint/js';
+import globals from 'globals';
 
-export default defineConfig([
+export default [
+  js.configs.recommended,
+
   {
-    files: ["**/*.{js,mjs,cjs,jsx}"],
-    plugins: { js, "cypress": "plugin-cypress" },
-    extends: ["js/recommended"],
-    rules: {
-      "no-unused-vars": "warn",
-      "no-var": "error",
-      "prefer-const": "warn",
-      "react/react-in-jsx-scope": "off",
-    },
+    files: ['**/*.js'],
     languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+
       globals: {
         ...globals.browser,
         ...globals.mocha,
+        // لدعم cypress بدون plugin
+        cy: 'readonly',
+        Cypress: 'readonly',
       },
     },
+
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-undef': 'warn',
+      'no-var': 'error',
+      'prefer-const': 'warn',
+    },
   },
-  pluginReact.configs.flat.recommended,
-]);
+];

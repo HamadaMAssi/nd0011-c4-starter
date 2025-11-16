@@ -4,7 +4,10 @@
   "description": "Flashcard tool",
   "scripts": {
     "start": "gulp",
-    "test": "mocha"
+    "test": "mocha",
+    "format": "prettier --write .",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "author": "",
   "license": "MIT",
@@ -21,6 +24,7 @@
     "gulp-mocha": "^10.0.1",
     "gulp-shell": "^0.8.0",
     "mocha": "^11.7.5",
-    "parcel": "^2.16.1"
+    "parcel": "^2.16.1",
+    "prettier": "^3.6.2"
   }
 }

@@ -17,7 +17,7 @@ const createElement = (elementType, text) => {
 
 // Creates images with alt
 const createImage = (url, alt) => {
-  const img = document.createElement("img");
+  const img = document.createElement('img');
   img.src = url;
   img.alt = alt;
   return img;
@@ -27,17 +27,17 @@ const createImage = (url, alt) => {
 const createHeader = (headerType, text, dataCy) => {
   const header = document.createElement(headerType);
   header.textContent = text;
-  header.setAttribute("data-cy", dataCy);
+  header.setAttribute('data-cy', dataCy);
   return header;
 };
 
 // Create a button that toggles the visibility of the form
 const createToggleButton = (text, element) => {
-  const button = document.createElement("button");
+  const button = document.createElement('button');
   button.textContent = text;
 
-  button.addEventListener("click", () => {
-    element.classList.toggle("notVisible");
+  button.addEventListener('click', () => {
+    element.classList.toggle('notVisible');
   });
 
   return button;
@@ -47,15 +47,15 @@ const createToggleButton = (text, element) => {
 
 // Helper function to create a label element
 const createLabel = (text, htmlFor) => {
-  const label = document.createElement("label");
+  const label = document.createElement('label');
   label.textContent = text;
-  label.setAttribute("for", htmlFor);
+  label.setAttribute('for', htmlFor);
   return label;
 };
 
 // Helper function to create an input element
 const createInput = (name) => {
-  const input = document.createElement("input");
+  const input = document.createElement('input');
   input.name = name;
   input.id = name;
   return input;
@@ -63,8 +63,8 @@ const createInput = (name) => {
 
 // Helper function to create a submit button
 const createSubmitButton = (value) => {
-  const submit = document.createElement("input");
-  submit.type = "submit";
+  const submit = document.createElement('input');
+  submit.type = 'submit';
   submit.value = value;
   return submit;
 };
