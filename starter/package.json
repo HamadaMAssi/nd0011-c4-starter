@@ -5,6 +5,8 @@
   "scripts": {
     "start": "gulp",
     "test": "mocha",
+    "cypress": "cypress run",
+    "lint": "eslint .",
     "format": "prettier --write .",
     "dev": "parcel index.html",
     "build": "parcel build index.html"

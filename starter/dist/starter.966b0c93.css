@@ -3,7 +3,8 @@ body header {
   width: 100px;
 }
 
-body header h1, nav li {
+body header h1,
+nav li {
   text-transform: uppercase;
 }
 
